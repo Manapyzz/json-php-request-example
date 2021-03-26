@@ -1,0 +1,22 @@
+{
+    "name": "alexandrepicard/json-response-example",
+    "require": {
+        "bramus/router": "^1.5"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.2"
+    },
+    "authors": [
+        {
+            "name": "Manapyzz",
+            "email": "alexandreb.picard@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/",
+            "Framework\\": "Framework/"
+        }
+    },
+    "description": ""
+}
