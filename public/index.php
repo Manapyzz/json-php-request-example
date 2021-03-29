@@ -11,6 +11,8 @@ $router->get('/homepage', '\App\Controller\HomeController@homepage');
 $router->get('/account/{id}', '\App\Controller\AccountController@get');
 $router->post('/account/create', '\App\Controller\AccountController@create');
 
-$router->get('/search/account/{accountNumber}', '\App\Controller\AccountController@search');
+$router->get('/search/account', '\App\Controller\HomeController@searchAccount');
+
+//$router->get('/search/account/{accountNumber}', '\App\Controller\AccountController@search');
 
 $router->run();

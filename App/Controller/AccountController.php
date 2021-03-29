@@ -3,8 +3,9 @@
 namespace App\Controller;
 
 use App\Model\AccountModel;
+use Framework\Controller;
 
-class AccountController
+class AccountController extends Controller
 {
     public function getAll()
     {

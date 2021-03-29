@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Number</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for account in accounts %}
+        <tr>
+            <th scope="row">{{ account.id }}</th>
+            <td>{{ account.number }}</td>
+        </tr>
+    {% endfor %}
+
+    </tbody>
+</table>
