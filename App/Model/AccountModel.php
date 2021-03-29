@@ -35,4 +35,14 @@ class AccountModel extends Model
             'userId' => $userId,
         ]);
     }
+
+    public function search($accountNumber)
+    {
+        $db = $this->getDb();
+        $stmt = $db->prepare('SELECT * FROM account WHERE number LIKE :accountNumber');
+        $stmt->execute([
+            'accountNumber' => '%'.$accountNumber.'%'
+        ]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

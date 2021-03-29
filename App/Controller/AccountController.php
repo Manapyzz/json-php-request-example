@@ -70,4 +70,18 @@ class AccountController
         header('Content-Type: application/json');
         echo json_encode($response);
     }
+
+    public function search($accoutNumber)
+    {
+        $accountModel = new AccountModel();
+        $accounts = $accountModel->search($accoutNumber);
+
+        $response = [
+            'statut' => 'success',
+            'data' => $accounts
+        ];
+
+        header('Content-Type: application/json');
+        echo json_encode($response);
+    }
 }
